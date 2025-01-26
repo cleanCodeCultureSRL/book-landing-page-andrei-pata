@@ -34,10 +34,10 @@ export function AuthorSection() {
         </div>
 
         <div className="space-y-6">
-          <h3 className="text-3xl font-bold">Andrei-Valentin Pata</h3>
+          <h3 className="text-3xl font-bold">Andrei-Valentin Pața</h3>
 
           <p className="text-muted-foreground">
-            Andrei-Valentin Pata este un lider în domeniul tehnologiei și fondatorul Clean Code Culture, o companie
+            Andrei-Valentin Pața este un lider în domeniul tehnologiei și fondatorul Clean Code Culture, o companie
             dedicată dezvoltării de soluții software personalizate, inovative și scalabile. Cu o experiență vastă în
             arhitectura software și integrarea hardware, Andrei îmbină abilitățile tehnice cu o viziune clară pentru
             crearea unor produse de înaltă calitate.
