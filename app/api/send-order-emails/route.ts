@@ -85,13 +85,14 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ message: "Emails sent successfully" });
   } catch (error) {
-    console.error("Error sending emails:", error);
-    console.error("Error stack:", error.stack);
+    const err = error as Error;
+    console.error("Error sending emails:", err);
+    console.error("Error stack:", err.stack);
     return NextResponse.json(
       {
         error: "Failed to send emails",
-        details: error.message,
-        stack: error.stack,
+        details: err.message,
+        stack: err.stack,
       },
       { status: 500 }
     );

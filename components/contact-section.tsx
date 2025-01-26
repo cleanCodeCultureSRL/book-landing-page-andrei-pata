@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
+import { CheckedState } from "@radix-ui/react-checkbox"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ export function ContactSection() {
     email: "",
     message: "",
   })
-  const [acceptTerms, setAcceptTerms] = useState(false)
+  const [acceptTerms, setAcceptTerms] = useState<CheckedState>(false);
   const [isEmailValid, setIsEmailValid] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
