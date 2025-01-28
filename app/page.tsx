@@ -11,7 +11,6 @@ import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { SubscribeSection } from "@/components/subscribe-section"
 import { TargetAudienceSection } from "@/components/target-audience-section"
-import { generateRandomWords } from "@/lib/utils"
 import { useEffect, useRef, useState } from "react"
 
 export default function Home() {
