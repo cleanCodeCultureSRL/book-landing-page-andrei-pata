@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* app/global.css */
+@font-face {
+  font-family: "StreetTag";
+  src: url("/fonts/StreetTag.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-custom {
+  font-family: "StreetTag", sans-serif;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

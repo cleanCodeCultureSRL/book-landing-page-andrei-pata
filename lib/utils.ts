@@ -39,3 +39,24 @@ export async function handlePreorderSubmit(formData: FormData) {
     throw new Error("Session URL not provided in response");
   }
 }
+
+const backgroundWords = [
+  "RESPONSABILITATE",
+  "UNITATE",
+  "PRIETENIE",
+  "PUTEREA INTENTIEI",
+  "PROGRAMARE",
+  "ROBOTICA",
+  "APARTENTENTA",
+  "IMPORTANTA FAMILIEI",
+];
+
+const bookColors = [
+  "rgb(162,130,167)", // Purple
+  "rgb(65,103,112)", // Teal
+  "rgb(229,107,111)", // Pink
+  "rgb(234,172,139)", // Peach
+  "rgb(255,255,255)", // White
+];
+
+const fontSizes = ["text-xl", "text-2xl", "text-3xl", "text-4xl"];

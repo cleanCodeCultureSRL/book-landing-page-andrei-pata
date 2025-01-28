@@ -9,8 +9,12 @@ import { FormModal } from "./form-modal"
 export function HeroSection() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
+
+
+
   return (
-    <section className="container py-12 md:py-24">
+    <section className="container py-12 md:py-24 relative overflow-hidden">
+
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
         <div className="space-y-8">
           <div>

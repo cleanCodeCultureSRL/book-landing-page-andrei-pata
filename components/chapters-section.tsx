@@ -72,7 +72,7 @@ export function ChaptersSection() {
         {chapters.map((chapter) => (
           <div key={chapter.number} className="p-6 bg-muted/50 rounded-lg space-y-3">
             <div className="text-muted-foreground">Capitolul {chapter.number}</div>
-            <h3 className="text-xl font-semibold">{chapter.title}</h3>
+            <h3 className="text-xl font-bold">{chapter.title}</h3>
             <p className="text-muted-foreground">{chapter.description}</p>
           </div>
         ))}

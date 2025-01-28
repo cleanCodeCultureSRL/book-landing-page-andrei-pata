@@ -11,7 +11,7 @@ export function SiteFooter() {
             <Link href="/" className="inline-block">
               <Image
                 src="/logo.png"
-                alt="Logo"
+                alt="Logo SpaceZone"
                 width={150}
                 height={50}
                 className="h-12 w-auto"
@@ -25,45 +25,31 @@ export function SiteFooter() {
 
           {/* Sections Column */}
           <div className="space-y-4">
+            <h3 className="text-white font-semibold mb-4">Link-uri utile</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/#hero-section" className="hover:text-white transition-colors">
-                  Acasă
+                <Link href="/terms" className="hover:text-white transition-colors">
+                  Termeni și condiții
                 </Link>
               </li>
               <li>
-                <Link href="/#features-section" className="hover:text-white transition-colors">
-                  Despre
+                <Link href="/politica-de-retur" className="hover:text-white transition-colors">
+                  Politica de retur
                 </Link>
               </li>
               <li>
-                <Link href="/#chapters-section" className="hover:text-white transition-colors">
-                  Capitole
+                <Link href="/politica-de-prelucrare-a-datelor-personale" className="hover:text-white transition-colors">
+                  Politica de prelucrare a datelor personale
                 </Link>
               </li>
               <li>
-                <Link href="/#learning-section" className="hover:text-white transition-colors">
-                  Ce vei învăța?
+                <Link href="/politica-de-livrare" className="hover:text-white transition-colors">
+                  Politica de livrare
                 </Link>
               </li>
               <li>
-                <Link href="/#audience-section" className="hover:text-white transition-colors">
-                  Pentru cine este?
-                </Link>
-              </li>
-              <li>
-                <Link href="/#author-section" className="hover:text-white transition-colors">
-                  Autor
-                </Link>
-              </li>
-              <li>
-                <Link href="/#pricing-section" className="hover:text-white transition-colors">
-                  Precomandă
-                </Link>
-              </li>
-              <li>
-                <Link href="/#contact-section" className="hover:text-white transition-colors">
-                  Contact
+                <Link href="/politica-de-cookies" className="hover:text-white transition-colors">
+                  Politica de cookies
                 </Link>
               </li>
             </ul>
@@ -92,6 +78,28 @@ export function SiteFooter() {
             © {new Date().getFullYear()} Drepturi de autor rezervate Andrei-Valentin Pața. Publicat de Editura
             Createrra.
           </p>
+        </div>
+      </div>
+      <div className="container py-4 border-t border-gray-800">
+        <div className="flex flex-wrap justify-center gap-4 items-center">
+          <Link href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/anpc-sol.png"
+              alt="Soluționarea online a litigiilor"
+              width={300}
+              height={50}
+              className="h-auto"
+            />
+          </Link>
+          <Link href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/anpc-sal.webp"
+              alt="ANPC - Soluționarea alternativă a litigiilor"
+              width={300}
+              height={50}
+              className="h-auto"
+            />
+          </Link>
         </div>
       </div>
     </footer>

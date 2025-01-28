@@ -1,18 +1,18 @@
 "use client"
 
-import { useEffect, useState, useRef } from "react"
-import { SiteHeader } from "@/components/site-header"
-import { HeroSection } from "@/components/hero-section"
-import { FeaturesSection } from "@/components/features-section"
-import { ChaptersSection } from "@/components/chapters-section"
-import { LearningSection } from "@/components/learning-section"
-import { TargetAudienceSection } from "@/components/target-audience-section"
-import { SubscribeSection } from "@/components/subscribe-section"
-import { ReviewsSection } from "@/components/reviews-section"
 import { AuthorSection } from "@/components/author-section"
-import { PricingSection } from "@/components/pricing-section"
+import { ChaptersSection } from "@/components/chapters-section"
 import { ContactSection } from "@/components/contact-section"
+import { FeaturesSection } from "@/components/features-section"
+import { HeroSection } from "@/components/hero-section"
+import { LearningSection } from "@/components/learning-section"
+import { PricingSection } from "@/components/pricing-section"
 import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
+import { SubscribeSection } from "@/components/subscribe-section"
+import { TargetAudienceSection } from "@/components/target-audience-section"
+import { generateRandomWords } from "@/lib/utils"
+import { useEffect, useRef, useState } from "react"
 
 export default function Home() {
   const [visibleSections, setVisibleSections] = useState({
@@ -92,6 +92,8 @@ export default function Home() {
       if (subscribeRef.current) observer.unobserve(subscribeRef.current)
     }
   }, [])
+
+
 
   return (
     <>

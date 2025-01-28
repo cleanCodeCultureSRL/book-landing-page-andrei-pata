@@ -12,7 +12,7 @@ export function FeaturesSection() {
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
         <div className="relative mx-auto w-full max-w-[400px] aspect-[3/4]">
           <Image
-            src="/book_cover.png"
+            src="/book_cover_back.png"
             alt="Coperta Cărții"
             fill
             className="object-contain"
