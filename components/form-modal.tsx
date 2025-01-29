@@ -57,12 +57,12 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
         const { error } = await stripe.redirectToCheckout({ sessionId })
         if (error) {
           console.error("Stripe redirect error:", error)
-          router.push("/order-failed")
+          router.push("/comanda-nefinalizata")
         }
       }
     } catch (error) {
       console.error("Error creating checkout session:", error)
-      router.push("/order-failed")
+      router.push("/comanda-nefinalizata")
     } finally {
       setIsLoading(false)
       onClose()

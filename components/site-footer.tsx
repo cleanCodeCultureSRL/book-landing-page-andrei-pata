@@ -28,7 +28,7 @@ export function SiteFooter() {
             <h3 className="text-white font-semibold mb-4">Link-uri utile</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/terms" className="hover:text-white transition-colors">
+                <Link href="/termeni-si-conditii" className="hover:text-white transition-colors">
                   Termeni și condiții
                 </Link>
               </li>

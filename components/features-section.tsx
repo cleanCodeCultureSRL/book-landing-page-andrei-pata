@@ -39,7 +39,7 @@ export function FeaturesSection() {
               <div>
                 <h3 className="font-semibold">Cum să-ți regăsești drumul în viață</h3>
                 <p className="text-muted-foreground">
-                  Învață din lupta lui Jimmy cu frica de eșec și descoperă cum intenția poate schimba totul.
+                  Învață din lupta lui Jimmy cu frica de eșec și descoperă cum intenția poate schimba totul
                 </p>
               </div>
             </div>

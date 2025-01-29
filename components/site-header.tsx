@@ -1,8 +1,9 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram, Linkedin, Menu, X } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 interface SiteHeaderProps {
   visibleSections: {
@@ -20,15 +21,31 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ visibleSections }: SiteHeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const router = useRouter()
+
+  useEffect(() => {
+    const section = new URLSearchParams(window.location.search).get("section")
+    if (section) {
+      const element = document.getElementById(section)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+      window.history.replaceState({}, document.title, "/")
+    }
+  }, [])
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   const scrollToSection = (href: string) => {
-    const element = document.getElementById(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+    if (window.location.pathname !== "/") {
+      router.push(`/?section=${href}`)
+    } else {
+      const element = document.getElementById(href)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
     }
     setMobileMenuOpen(false)
   }
@@ -51,12 +68,16 @@ export function SiteHeader({ visibleSections }: SiteHeaderProps) {
           className="flex items-center"
           onClick={(e) => {
             e.preventDefault()
-            scrollToTop()
+            if (window.location.pathname !== "/") {
+              router.push("/")
+            } else {
+              scrollToTop()
+            }
           }}
         >
           <Image
             src="/logo.png"
-            alt="Logo"
+            alt="SpaceZone Logo"
             width={150}
             height={50}
             className="h-12 w-auto"
@@ -67,7 +88,7 @@ export function SiteHeader({ visibleSections }: SiteHeaderProps) {
           {navItems.map(({ href, label }) => (
             <Link
               key={href}
-              href={`#${href}`}
+              href={`/#${href}`}
               className={`text-sm font-medium group ${visibleSections[href.replace("-section", "") as keyof typeof visibleSections] ? "active" : ""}`}
               onClick={(e) => {
                 e.preventDefault()

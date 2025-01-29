@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
-import { CheckedState } from "@radix-ui/react-checkbox"
+import { useToast } from "@/components/ui/use-toast"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -14,14 +14,44 @@ export function ContactSection() {
     email: "",
     message: "",
   })
-  const [acceptTerms, setAcceptTerms] = useState<CheckedState>(false);
+  const [acceptTerms, setAcceptTerms] = useState(false)
   const [isEmailValid, setIsEmailValid] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const { toast } = useToast()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission logic here
-    console.log("Formular trimis:", formData)
-    setFormData({ name: "", email: "", message: "" })
+    setIsLoading(true)
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        toast({
+          title: "Mesaj trimis cu succes!",
+          description: "Vă mulțumim pentru mesaj. Vă vom contacta în curând.",
+        })
+        setFormData({ name: "", email: "", message: "" })
+        setAcceptTerms(false)
+      } else {
+        throw new Error("Failed to send email")
+      }
+    } catch (error) {
+      console.error("Error:", error)
+      toast({
+        title: "Eroare",
+        description: "A apărut o eroare la trimiterea mesajului. Vă rugăm să încercați din nou.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -85,12 +115,12 @@ export function ContactSection() {
             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
           >
             Accept{" "}
-            <Link href="/terms" className="text-primary hover:underline">
+            <Link href="/termeni-si-conditii" className="text-primary hover:underline text-blue-500">
               termenii și condițiile
             </Link>{" "}
             și{" "}
-            <Link href="/gdpr" className="text-primary hover:underline">
-              GDPR
+            <Link href="/politica-de-prelucrare-a-datelor-personale" className="text-primary hover:underline text-blue-500">
+              politica de prelucrare a datelor personale.
             </Link>
           </label>
         </div>
@@ -101,9 +131,9 @@ export function ContactSection() {
             type="submit"
             size="lg"
             className="bg-[rgb(162,130,167)] hover:bg-[rgb(172,140,177)] text-white"
-            disabled={!acceptTerms || !isEmailValid}
+            disabled={!acceptTerms || !isEmailValid || isLoading}
           >
-            Trimite mesaj
+            {isLoading ? "Se trimite..." : "Trimite mesaj"}
           </Button>
         </div>
       </form>

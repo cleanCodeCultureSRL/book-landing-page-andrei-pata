@@ -11,7 +11,6 @@ export function PricingSection() {
       name: "Sponsorizează-mă în scrierea cărții",
       price: "50 RON",
       features: [
-        "Numele tău va apărea în social media în postarea pentru sponsorii cărții.",
         "Acces exclusiv la PDF-ul cărții, înainte de lansarea oficială.",
         "Primești un newsletter cu actualizări despre procesul de scriere.",
         "Contribui la realizarea unei povești care poate inspira o generație.",
@@ -25,7 +24,6 @@ export function PricingSection() {
       features: [
         "Obții cartea la un preț redus, disponibil doar pentru precomenzi (până la 15 FEBRUARIE)",
         "Acces la un capitol gratuit în format PDF pentru a începe lectura mai devreme.",
-        "Numele tău va apărea în social media în postarea pentru precomanda cărții.",
       ],
       buttonText: "Precomandă cu reducere",
     },
@@ -34,7 +32,6 @@ export function PricingSection() {
       price: "60 RON",
       features: [
         "Obții cartea fizică la preț standard, susținând autorul în mod direct.",
-        "Acces la sesiune exclusivă de Q&A cu autorul.",
         "Primești un semn de carte personalizat, inspirat din poveste.",
       ],
       buttonText: "Precomandă acum",

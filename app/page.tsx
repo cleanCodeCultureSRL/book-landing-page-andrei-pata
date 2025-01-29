@@ -1,17 +1,19 @@
 "use client"
 
-import { AuthorSection } from "@/components/author-section"
-import { ChaptersSection } from "@/components/chapters-section"
-import { ContactSection } from "@/components/contact-section"
-import { FeaturesSection } from "@/components/features-section"
-import { HeroSection } from "@/components/hero-section"
-import { LearningSection } from "@/components/learning-section"
-import { PricingSection } from "@/components/pricing-section"
-import { SiteFooter } from "@/components/site-footer"
+import { useEffect, useState, useRef } from "react"
 import { SiteHeader } from "@/components/site-header"
-import { SubscribeSection } from "@/components/subscribe-section"
+import { HeroSection } from "@/components/hero-section"
+import { FeaturesSection } from "@/components/features-section"
+import { ChaptersSection } from "@/components/chapters-section"
+import { LearningSection } from "@/components/learning-section"
 import { TargetAudienceSection } from "@/components/target-audience-section"
-import { useEffect, useRef, useState } from "react"
+import { SubscribeSection } from "@/components/subscribe-section"
+import { ReviewsSection } from "@/components/reviews-section"
+import { AuthorSection } from "@/components/author-section"
+import { PricingSection } from "@/components/pricing-section"
+import { ContactSection } from "@/components/contact-section"
+import { SiteFooter } from "@/components/site-footer"
+import { useSearchParams } from "next/navigation"
 
 export default function Home() {
   const [visibleSections, setVisibleSections] = useState({
@@ -92,7 +94,16 @@ export default function Home() {
     }
   }, [])
 
-
+  const searchParams = useSearchParams()
+  useEffect(() => {
+    const section = searchParams.get("section")
+    if (section) {
+      const element = document.getElementById(section)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }, [searchParams])
 
   return (
     <>
