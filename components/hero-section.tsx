@@ -19,7 +19,7 @@ export function HeroSection() {
               „Fii eroul propriei tale povești"
             </h1>
             <p className="text-xl text-muted-foreground mb-6">
-              💭 Viața te poate abate de la visurile tale, dar puterea de a reveni pe drumul corect e îți aparține.
+              💭 Viața te poate abate de la visurile tale, dar puterea de a reveni pe drumul corect îți aparține.
               Inspiră-te din povestea lui Jimmy și descoperă cum intenția, prietenia și curajul pot transforma
               imposibilul în realitate.
             </p>
