@@ -16,7 +16,7 @@ export async function handlePreorderSubmit(formData: FormData) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       packageName: formData.get("product"),
-      packagePrice: 60, // Adjust prices as needed
+      packagePrice: 50, // Adjust prices as needed
       currency: "ron",
       customerDetails: {
         fullName: formData.get("fullName"),

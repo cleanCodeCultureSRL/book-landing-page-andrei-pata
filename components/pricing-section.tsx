@@ -20,7 +20,7 @@ export function PricingSection() {
     {
       name: "Precomandă cartea – reducere specială",
       price: "39 RON",
-      originalPrice: "60 RON",
+      originalPrice: "50 RON",
       features: [
         "Obții cartea la un preț redus, disponibil doar pentru precomenzi (până la 15 FEBRUARIE)",
         "Acces la un capitol gratuit în format PDF pentru a începe lectura mai devreme.",
@@ -29,7 +29,7 @@ export function PricingSection() {
     },
     {
       name: "Precomandă cartea – preț întreg",
-      price: "60 RON",
+      price: "50 RON",
       features: [
         "Obții cartea fizică la preț standard, susținând autorul în mod direct.",
         "Primești un semn de carte personalizat, inspirat din poveste.",

@@ -11,9 +11,9 @@ export async function POST(req: Request) {
 
   // Define prices based on package type
   const prices = {
-    "Sponsorizează-mă în scrierea cărții": 5000, // 50 RON in cents
-    "Precomandă cartea – reducere specială": 3900, // 39 RON in cents
-    "Precomandă cartea – preț întreg": 6000, // 60 RON in cents
+    "Sponsorizează-mă în scrierea cărții (50RON)": 5000, // 50 RON in cents
+    "Precomandă cartea – reducere specială (39RON)": 3900, // 39 RON in cents
+    "Precomandă cartea – preț întreg (50RON)": 5000, // 50 RON in cents
   };
 
   const price = prices[packageType as keyof typeof prices];
