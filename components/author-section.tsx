@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Check, Facebook, Instagram, Linkedin } from "lucide-react"
+import { TikTokIcon } from "./icons/TikTokIcon"
 
 export function AuthorSection() {
   const achievements = [
@@ -79,6 +80,13 @@ export function AuthorSection() {
               >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
+              </Link>
+              <Link
+                href="https://www.tiktok.com/@andrei.paa.softwa"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <TikTokIcon className="h-5 w-5" />
+                <span className="sr-only">TikTok</span>
               </Link>
             </div>
           </div>

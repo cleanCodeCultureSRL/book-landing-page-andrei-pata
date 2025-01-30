@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Instagram, Linkedin, Menu, X } from "lucide-react"
 import { useRouter } from "next/navigation"
+import { TikTokIcon } from "./icons/TikTokIcon"
 
 interface SiteHeaderProps {
   visibleSections: {
@@ -119,6 +120,14 @@ export function SiteHeader({ visibleSections }: SiteHeaderProps) {
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
           </Link>
+
+          <Link
+            href="https://www.tiktok.com/@andrei.paa.softwa"
+            className="text-muted-foreground hover:text-foreground"
+          >
+            <TikTokIcon className="h-5 w-5" />
+            <span className="sr-only">TikTok</span>
+          </Link>
         </div>
 
         <button
@@ -165,6 +174,13 @@ export function SiteHeader({ visibleSections }: SiteHeaderProps) {
             >
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
+            </Link>
+            <Link
+              href="https://www.tiktok.com/@andrei.paa.softwa"
+              className="text-muted-foreground hover:text-foreground"
+            >
+              <TikTokIcon className="h-5 w-5" />
+              <span className="sr-only">TikTok</span>
             </Link>
           </div>
         </div>
