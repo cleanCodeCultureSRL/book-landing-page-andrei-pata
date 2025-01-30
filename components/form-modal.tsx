@@ -86,7 +86,7 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
               <SelectContent>
                 <SelectItem value="Sponsorizează-mă în scrierea cărții">Sponsorizare (50RON)</SelectItem>
                 <SelectItem value="Precomandă cartea – reducere specială">Precomandă la preț redus(39RON)</SelectItem>
-                <SelectItem value="Precomandă cartea – preț întreg">Precomandă la preț întreg(60RON)</SelectItem>
+                <SelectItem value="Precomandă cartea – preț întreg">Precomandă la preț întreg(50RON)</SelectItem>
               </SelectContent>
             </Select>
           </div>
