@@ -14,6 +14,7 @@ import { PricingSection } from "@/components/pricing-section"
 import { ContactSection } from "@/components/contact-section"
 import { SiteFooter } from "@/components/site-footer"
 import { useSearchParams } from "next/navigation"
+import { BackgroundWords } from "@/components/background-words"
 
 
 const backgroundWords = [
@@ -132,23 +133,7 @@ const Home = () => {
       <SiteHeader visibleSections={visibleSections} />
       <main>
         <div id="hero-section" ref={heroRef}>
-          {backgroundWords.map(({ word, top, left }, index) => (
-            <div
-              key={index}
-              className="absolute text-gray-200 font-bold whitespace-nowrap font-custom select-none"
-              style={{
-                top,
-                left,
-                transform: `rotate(${index * 20}deg)`,
-                color: colors[index % colors.length],
-                fontSize: `${3 + (index % 4)}rem`,
-                opacity: 0.3,
-                zIndex: 0,
-              }}
-            >
-              {word}
-            </div>
-          ))}
+          <BackgroundWords />
           <HeroSection />
         </div>
         <div id="features-section" ref={featuresRef}>

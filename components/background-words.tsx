@@ -21,7 +21,7 @@ const colors = [
 
 export function BackgroundWords() {
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden hidden md:block">
       {backgroundWords.map(({ word, top, left }, index) => (
         <div
           key={index}

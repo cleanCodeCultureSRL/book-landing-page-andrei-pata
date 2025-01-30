@@ -15,13 +15,13 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
   let testAccount = await nodemailer.createTestAccount();
 
-  let transporter = nodemailer.createTransport({
-    host: testAccount.smtp.host,
-    port: testAccount.smtp.port,
-    secure: testAccount.smtp.secure,
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
-      user: testAccount.user,
-      pass: testAccount.pass,
+      user: "andrei.pata@cleancodeculture.com",
+      pass: "lomr pcqk nstv crkh",
     },
   });
 
