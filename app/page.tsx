@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef, Suspense } from "react"
 import { SiteHeader } from "@/components/site-header"
 import { HeroSection } from "@/components/hero-section"
 import { FeaturesSection } from "@/components/features-section"
@@ -15,7 +15,9 @@ import { ContactSection } from "@/components/contact-section"
 import { SiteFooter } from "@/components/site-footer"
 import { useSearchParams } from "next/navigation"
 
-export default function Home() {
+
+
+const Home = () => {
   const [visibleSections, setVisibleSections] = useState({
     hero: false,
     features: false,
@@ -142,3 +144,11 @@ export default function Home() {
   )
 }
 
+
+export default function HomeSuspenseWrapped() {
+  return (
+    <Suspense fallback={null}>
+      <Home />
+    </Suspense>
+  )
+}

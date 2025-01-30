@@ -77,7 +77,7 @@ export async function POST(req: Request) {
           <h1>Îți mulțumesc din inimă pentru abonare!</h1>
         </div>
         <div class="content">
-          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/book%20cover-gOOFFZTKvAFYqJcrant3H0oyNKl8jr.jpeg" alt="Coperta cărții One Love" class="book-image">
+          <img src="https://www.andreipata.ro/_next/image?url=%2Fbook_cover.png&w=1920&q=75&dpl=dpl_9szAPyTNvT9XiSSCdY8PgBYPnm4A" alt="Coperta cărții One Love" class="book-image">
           <h2>Capitolul gratuit din "One Love"</h2>
           <p>Dragă cititorule,</p>
           <p>Îți mulțumesc pentru interesul arătat față de cartea "One Love". Atașat acestui email, vei găsi un capitol gratuit care îți va oferi o mostră din călătoria inspirațională a lui Jimmy.</p>

@@ -127,7 +127,7 @@ export function ContactSection() {
         </div>
 
         <div className="flex items-center justify-between">
-          <p className="text-sm text-muted-foreground">* Fiți sigur. Nu vom trimite spam în inbox-ul dvs.</p>
+          <p className="text-sm text-muted-foreground"></p>
           <Button
             type="submit"
             size="lg"

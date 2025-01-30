@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, Home, BookOpen } from "lucide-react"
@@ -9,8 +9,9 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 
-export default function SuccessPage() {
+function SuccessPage() {
   const [orderDetails, setOrderDetails] = useState<any>(null)
+
   const searchParams = useSearchParams()
   const sessionId = searchParams.get("session_id")
 
@@ -120,3 +121,10 @@ export default function SuccessPage() {
   )
 }
 
+export default function SuccessPageSuspenseWrapped() {
+  return (
+    <Suspense fallback={null}>
+      <SuccessPage />
+    </Suspense>
+  )
+}
