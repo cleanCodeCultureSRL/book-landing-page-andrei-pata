@@ -33,6 +33,7 @@ export function PricingSection() {
       features: [
         "Obții cartea fizică la preț standard, susținând autorul în mod direct.",
         "Primești un semn de carte personalizat, inspirat din poveste.",
+        "Acces la un capitol gratuit în format PDF pentru a începe lectura mai devreme.",
       ],
       buttonText: "Precomandă acum",
     },
