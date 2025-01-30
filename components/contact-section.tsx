@@ -64,7 +64,7 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-12 md:py-24 relative overflow-hidden">
+    <section className="py-12 px-6 md:px-6 md:py-24 relative overflow-hidden">
       <BackgroundWords />
       <div className="text-center space-y-4 mb-12 md:mb-16">
         <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">Contactează autorul</h2>

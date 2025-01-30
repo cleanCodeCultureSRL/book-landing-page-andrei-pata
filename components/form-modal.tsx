@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -27,6 +27,12 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
     address: "",
   })
   const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    setFormData((prevData) => ({ ...prevData, packageType: selectedPlan }))
+  }, [selectedPlan])
+
+  console.log({ formData })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -57,12 +63,12 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
         const { error } = await stripe.redirectToCheckout({ sessionId })
         if (error) {
           console.error("Stripe redirect error:", error)
-          router.push("/comanda-nefinalizata")
+          router.push("/order-failed")
         }
       }
     } catch (error) {
       console.error("Error creating checkout session:", error)
-      router.push("/comanda-nefinalizata")
+      router.push("/order-failed")
     } finally {
       setIsLoading(false)
       onClose()
@@ -71,7 +77,7 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="w-[95%] sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Precomandă cartea</DialogTitle>
           <DialogDescription>Completează formularul pentru a finaliza precomanda ta.</DialogDescription>
@@ -79,14 +85,14 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="packageType">Tipul pachetului</Label>
-            <Select name="packageType" value={formData.packageType} onValueChange={handleSelectChange}>
+            <Select name="packageType" defaultValue={selectedPlan} onValueChange={handleSelectChange}>
               <SelectTrigger>
                 <SelectValue placeholder="Selectează tipul pachetului" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Sponsorizează-mă în scrierea cărții (50RON)">Sponsorizare (50RON)</SelectItem>
-                <SelectItem value="Precomandă cartea – reducere specială (39RON)">Precomandă la preț redus(39RON)</SelectItem>
-                <SelectItem value="Precomandă cartea – preț întreg (50RON)">Precomandă la preț întreg(50RON)</SelectItem>
+                <SelectItem value="Precomandă cartea – reducere specială (39RON)">Precomandă la preț redus (39RON)</SelectItem>
+                <SelectItem value="Precomandă cartea – preț întreg (50RON)">Precomandă la preț întreg (50RON)</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -112,7 +118,7 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
             <Label htmlFor="address">Adresă completă de livrare</Label>
             <Textarea id="address" name="address" value={formData.address} onChange={handleChange} required />
           </div>
-          <Button type="submit" className="w-full bg-[rgb(162,130,167)] hover:bg-[rgb(172,140,177)] " disabled={isLoading}>
+          <Button type="submit" className="w-full" disabled={isLoading}>
             {isLoading ? "Se procesează..." : "Trimite comanda"}
           </Button>
         </form>

@@ -52,7 +52,7 @@ export function ChaptersSection() {
       number: 9,
       title: "NEXT LEVEL",
       description:
-        "Deși prins de poliție, Jimmy scapă la limită, promovează bacalaureatul și își începe stagiu IT, lăsând graffiti-ul ilegal în urmă pentru un viitor grandios.",
+        "Deși prins de poliție, Jimmy scapă la limită, promovează bacalaureatul și își începe stagiul IT, lăsând graffiti-ul ilegal în urmă pentru un viitor grandios.",
     },
   ]
 
