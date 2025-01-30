@@ -76,7 +76,7 @@ export function ContactSection() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="max-w-[800px] mx-auto space-y-6">
+      <form onSubmit={handleSubmit} className="max-w-[800px] mx-auto space-y-6 z-10">
         <div className="grid gap-4 md:grid-cols-2">
           <Input
             type="text"
