@@ -58,10 +58,10 @@ export function SiteFooter() {
           {/* Contact Column */}
           <div className="space-y-4">
             <Link
-              href="mailto:andreipatza@gmail.com"
+              href="mailto:andrei.pata@cleancodeculture.com"
               className="block text-white hover:text-gray-300 underline underline-offset-4"
             >
-              andreipatza@gmail.com
+              andrei.pata@cleancodeculture.com
             </Link>
             <div className="space-y-2">
               <p className="block text-white">Editura Createrra</p>
