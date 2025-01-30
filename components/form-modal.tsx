@@ -84,9 +84,9 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
                 <SelectValue placeholder="Selectează tipul pachetului" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Sponsorizează-mă în scrierea cărții">Sponsorizare (50RON)</SelectItem>
-                <SelectItem value="Precomandă cartea – reducere specială">Precomandă la preț redus(39RON)</SelectItem>
-                <SelectItem value="Precomandă cartea – preț întreg">Precomandă la preț întreg(50RON)</SelectItem>
+                <SelectItem value="Sponsorizează-mă în scrierea cărții (50RON)">Sponsorizare (50RON)</SelectItem>
+                <SelectItem value="Precomandă cartea – reducere specială (39RON)">Precomandă la preț redus(39RON)</SelectItem>
+                <SelectItem value="Precomandă cartea – preț întreg (50RON)">Precomandă la preț întreg(50RON)</SelectItem>
               </SelectContent>
             </Select>
           </div>
