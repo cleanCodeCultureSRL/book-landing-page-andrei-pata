@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from "next/link"
 import { useToast } from "@/components/ui/use-toast"
+import { BackgroundWords } from "./background-words"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -63,7 +64,8 @@ export function ContactSection() {
   }
 
   return (
-    <section className="container py-12 md:py-24">
+    <section className="py-12 md:py-24 relative overflow-hidden">
+      <BackgroundWords />
       <div className="text-center space-y-4 mb-12 md:mb-16">
         <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">Contactează autorul</h2>
         <div className="max-w-[800px] mx-auto">

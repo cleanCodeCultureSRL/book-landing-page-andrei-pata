@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useToast } from "@/components/ui/use-toast"
+import { BackgroundWords } from "./background-words"
 
 export function SubscribeSection() {
   const [email, setEmail] = useState("")
@@ -45,7 +46,8 @@ export function SubscribeSection() {
   }
 
   return (
-    <section className="bg-[rgb(65,103,112)] py-12 md:py-24">
+    <section className="bg-[rgb(65,103,112)] py-12 md:py-24 relative overflow-hidden">
+      <BackgroundWords />
       <div className="container max-w-[800px] mx-auto text-center space-y-8">
         <div className="space-y-4">
           <p className="text-gray-200">Abonează-te acum</p>

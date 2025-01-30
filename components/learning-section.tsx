@@ -1,4 +1,5 @@
 import { Check } from "lucide-react"
+import { BackgroundWords } from "./background-words"
 
 export function LearningSection() {
   const learningPoints = [
@@ -35,7 +36,8 @@ export function LearningSection() {
   ]
 
   return (
-    <section className="bg-[rgb(162,130,167)] py-12 md:py-24">
+    <section className="bg-[rgb(162,130,167)] py-12 md:py-24 relative overflow-hidden">
+      <BackgroundWords />
       <div className="container">
         <div className="text-center space-y-4 mb-12 md:mb-16">
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl text-white">Lucruri pe care le vei învăța</h2>
