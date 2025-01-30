@@ -109,7 +109,8 @@ export function ContactSection() {
         />
 
         <div className="flex items-center space-x-2 mb-4">
-          <Checkbox id="terms" checked={acceptTerms} onCheckedChange={setAcceptTerms} />
+          <Checkbox id="terms" checked={acceptTerms} onCheckedChange={(checked) => setAcceptTerms(checked === true)}
+          />
           <label
             htmlFor="terms"
             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"

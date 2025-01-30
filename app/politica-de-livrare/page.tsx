@@ -18,7 +18,7 @@ export default function DeliveryPolicy() {
         }}
       />
       <main className="container mx-auto py-12 px-4">
-        <div class="container mx-auto">
+        <div className="container mx-auto">
           <p><strong>Politica de livrare</strong></p>
           <p>Modalitate de livrare</p>
           <p>Produsele vor fi livrate de firma de curierat in termen de 2-5 zile lucratoare la orice adresa de pe teritoriul Romaniei. La primirea coletului, va rugam verificati integritatea ambalajului. Mentiunile cu privire la eventualele probleme privind integritatea/continutul unor colete le puteti face in momentul livrarii pe AWB (formularul de receptie specific companiei de curierat) sau se intocmeste un proces-verbal de constatare, se refuza primirea si plata coletului. Orice reclamatii ulterioare, cu privire la aceste aspecte, sunt nule.</p>

@@ -18,7 +18,7 @@ export default function DataProcessingPolicyPage() {
         }}
       />
       <main className="container mx-auto py-12 px-4">
-        <div class="container mx-auto">
+        <div className="container mx-auto">
           <p><strong>POLITICA DE PRELUCRARE A DATELOR PERSONALE</strong></p>
           <p>Cine suntem noi</p>
           <p>Confidentialitatea datelor dumneavoastra cu caracter personal reprezinta o prioritate pentru&nbsp;<strong>CLEAN CODE CULTURE S.R.L.</strong>.,&nbsp;cu sediul social în Drm. Fermei, nr.83E, ap.10, Popești-Leordeni, ILFOV, Cod Postal 077160&nbsp;, inregistrata la Registrul Comertului ILFOV sub nr. J23/1903/20.03.2023 si cod unic de inregistrare 41085411 atribuit fiscal României, de aceea este important pentru noi sa va furnizam intr-o maniera clara si practica informatiile legate de prelucrarea datelor dvs. cu caracter personal. Prin urmare, ne vom alinia la standardele europene in vigoare privind pelucrarea datelor cu caracter personal si libera circulatie a acestor date stipulate in Regulamentul 679 din 27.04.2016&nbsp;<strong>(“Regulamentul general privind protecția datelor”</strong>&nbsp;sau&nbsp;<strong>“GDPR”)</strong>, precum și cu orice altă legislație aplicabilă pe teritoriul Romaniei. Întrucât unul dintre principiile esențiale ale acestui cadrul legal îl reprezintă transparența, am pregătit aceast document prin care dorim să vă informăm despre modul în care colectăm, utilizăm, transferăm și protejăm datele dvs. cu caracter personal atunci când interacționați cu noi în legătură cu produsele și serviciile noastre, inclusiv prin site-ul nostru web sau prin aplicațiile disponibile pe telefonul mobil.</p>

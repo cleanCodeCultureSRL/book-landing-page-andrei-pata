@@ -18,7 +18,7 @@ export default function TermsPage() {
           subscribe: false,
         }}
       />
-      <div class="container mx-auto">
+      <div className="container mx-auto">
         <h1>Termeni si Conditii</h1>
         <p><strong>TERMENII SI CONDITIILE</strong>&nbsp;generale se aplică tuturor vânzărilor de produse de către&nbsp;<strong>Societatea&nbsp; CLEAN CODE CULTURE S.R.L.</strong>&nbsp;prin intermediul magazinului online www.andreipata.ro</p>
         <p>IDENTITATEA PROFESIONISTULUI</p>
