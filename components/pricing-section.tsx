@@ -11,7 +11,7 @@ export function PricingSection() {
       name: "Sponsorizează-mă în scrierea cărții (50RON)",
       price: "50 RON",
       features: [
-        "Acces exclusiv la PDF-ul cărții, înainte de lansarea oficială.",
+        "Acces exclusiv la PDF-ul cărții, înainte de lansarea oficială (15 FEBRUARIE).",
         "Primești un newsletter cu actualizări despre procesul de scriere.",
         "Contribui la realizarea unei povești care poate inspira o generație.",
       ],
@@ -31,7 +31,7 @@ export function PricingSection() {
       name: "Precomandă cartea – preț întreg (50RON)",
       price: "50 RON",
       features: [
-        "Obții cartea fizică la preț standard, susținând autorul în mod direct.",
+        "Obții cartea fizică la preț standard, susținând autorul în mod direct. (după 15 FEBRUARIE)",
         "Primești un semn de carte personalizat, inspirat din poveste.",
         "Acces la un capitol gratuit în format PDF pentru a începe lectura mai devreme.",
       ],
