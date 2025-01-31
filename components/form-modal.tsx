@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -20,6 +20,7 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
   const router = useRouter()
   const [formData, setFormData] = useState({
     packageType: selectedPlan,
+    quantity: "1",
     firstName: "",
     lastName: "",
     email: "",
@@ -32,15 +33,13 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
     setFormData((prevData) => ({ ...prevData, packageType: selectedPlan }))
   }, [selectedPlan])
 
-  console.log({ formData })
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSelectChange = (value: string) => {
-    setFormData((prev) => ({ ...prev, packageType: value }))
+  const handleSelectChange = (name: string) => (value: string) => {
+    setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -85,7 +84,7 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="packageType">Tipul pachetului</Label>
-            <Select name="packageType" defaultValue={selectedPlan} onValueChange={handleSelectChange}>
+            <Select name="packageType" value={formData.packageType} onValueChange={handleSelectChange("packageType")}>
               <SelectTrigger>
                 <SelectValue placeholder="Selectează tipul pachetului" />
               </SelectTrigger>
@@ -93,6 +92,21 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
                 <SelectItem value="Sponsorizează-mă în scrierea cărții (50RON)">Sponsorizare (50RON)</SelectItem>
                 <SelectItem value="Precomandă cartea – reducere specială (39RON)">Precomandă la preț redus (39RON)</SelectItem>
                 <SelectItem value="Precomandă cartea – preț întreg (50RON)">Precomandă la preț întreg (50RON)</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="quantity">Număr de cărți</Label>
+            <Select name="quantity" value={formData.quantity} onValueChange={handleSelectChange("quantity")}>
+              <SelectTrigger>
+                <SelectValue placeholder="Selectează numărul de cărți" />
+              </SelectTrigger>
+              <SelectContent>
+                {[...Array(10)].map((_, i) => (
+                  <SelectItem key={i} value={(i + 1).toString()}>
+                    {i + 1}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>
@@ -115,7 +129,7 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
             <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} required />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="address">Adresă completă de livrare</Label>
+            <Label htmlFor="address">Adresă completă de livrare (Stradă, </Label>
             <Textarea id="address" name="address" value={formData.address} onChange={handleChange} required />
           </div>
           <Button type="submit" className="w-full" disabled={isLoading}>

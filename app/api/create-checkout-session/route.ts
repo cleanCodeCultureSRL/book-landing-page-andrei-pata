@@ -6,7 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 });
 
 export async function POST(req: Request) {
-  const { packageType, firstName, lastName, email, phone, address } =
+  const { packageType, quantity, firstName, lastName, email, phone, address } =
     await req.json();
 
   // Define prices based on package type
@@ -37,14 +37,14 @@ export async function POST(req: Request) {
             },
             unit_amount: price,
           },
-          quantity: 1,
+          quantity: Number.parseInt(quantity),
         },
       ],
       mode: "payment",
-      // success_url: `http://localhost:3000/comanda-efectuata?session_id={CHECKOUT_SESSION_ID}`,
-      // cancel_url: `http://localhost:3000/comanda-nefinalizata`,
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/comanda-efectuata?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/comanda-nefinalizata`,
+      success_url: `http://localhost:3000/comanda-efectuata?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `http://localhost:3000/comanda-nefinalizata`,
+      // success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/comanda-efectuata?session_id={CHECKOUT_SESSION_ID}`,
+      // cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/comanda-nefinalizata`,
       customer_email: email,
       metadata: {
         firstName,

@@ -26,6 +26,7 @@ export async function GET(req: Request) {
       email: session.customer_email,
       phone: session.metadata?.phone || "N/A",
       address: session.metadata?.address || "N/A",
+      quantity: lineItems.data[0]?.quantity || 1,
     });
   } catch (err) {
     console.error("Error fetching order details:", err);

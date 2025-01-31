@@ -23,6 +23,7 @@ export async function POST(req: Request) {
     email,
     phone,
     address,
+    quantity,
   } = await req.json();
 
   const customerEmailHtml = `
@@ -88,6 +89,7 @@ export async function POST(req: Request) {
           <li>Număr comandă: ${orderId}</li>
           <li>Produs: ${productName}</li>
           <li>Tip pachet: ${packageType}</li>
+          <li>Cantitate: ${quantity}</li>
         </ul>
         <p>Te vom ține la curent cu statusul cărții și data estimată de livrare. Între timp, pregătește-te să începi o călătorie inspirațională alături de Jimmy!</p>
         <h3>Ce urmează?</h3>
@@ -151,6 +153,7 @@ export async function POST(req: Request) {
           <li>Număr comandă: ${orderId}</li>
           <li>Produs: ${productName}</li>
           <li>Tip pachet: ${packageType}</li>
+          <li>Cantitate: ${quantity}</li>
           <li>Nume: ${firstName}</li>
           <li>Prenume: ${lastName}</li>
           <li>Email: ${email}</li>
