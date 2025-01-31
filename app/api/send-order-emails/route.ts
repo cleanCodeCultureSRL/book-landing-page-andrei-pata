@@ -177,6 +177,12 @@ export async function POST(req: Request) {
       to: email,
       subject: "Confirmare comandă - One Love",
       html: customerEmailHtml,
+      attachments: [
+        {
+          filename: "capitol-gratuit-one-love.pdf",
+          content: pdfContent,
+        },
+      ],
     });
     console.log("Customer email sent successfully");
 
