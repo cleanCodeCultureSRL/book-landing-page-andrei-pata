@@ -170,6 +170,9 @@ export async function POST(req: Request) {
   `;
 
   try {
+    const pdfPath = path.join(process.cwd(), "public", "sample-chapter-6.pdf");
+    const pdfContent = await fs.readFile(pdfPath);
+
     console.log("Attempting to send customer email...");
     // Send email to customer
     await transporter.sendMail({
