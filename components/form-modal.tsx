@@ -76,7 +76,7 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-[95%] sm:max-w-[425px]">
+      <DialogContent className="w-[95%] sm:max-w-[425px] max-h-[85vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Precomandă cartea</DialogTitle>
           <DialogDescription>Completează formularul pentru a finaliza precomanda ta.</DialogDescription>
