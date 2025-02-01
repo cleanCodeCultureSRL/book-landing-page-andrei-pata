@@ -30,8 +30,14 @@ function SuccessPage() {
       const data = await response.json()
       setOrderDetails(data)
 
-      // Send order emails
-      await sendOrderEmails(data)
+      // Check if the email has already been sent for this session
+      const emailSentKey = `emailSent_${sessionId}`
+      const isEmailSent = localStorage.getItem(emailSentKey)
+
+      if (!isEmailSent) {
+        await sendOrderEmails(data)
+        localStorage.setItem(emailSentKey, "true") // Mark as sent
+      }
     } catch (error) {
       console.error("Error fetching order details:", error)
     }
