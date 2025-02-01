@@ -129,7 +129,7 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
             <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} required />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="address">Adresă completă de livrare (Stradă, </Label>
+            <Label htmlFor="address">Adresă completă de livrare (inclusiv localitatea și județul) </Label>
             <Textarea id="address" name="address" value={formData.address} onChange={handleChange} required />
           </div>
           <Button type="submit" className="w-full" disabled={isLoading}>
