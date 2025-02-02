@@ -7,16 +7,16 @@ export function PricingSection() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedPlan, setSelectedPlan] = useState("")
   const plans = [
-    {
-      name: "Sponsorizează-mă în scrierea cărții (50RON cu TVA)",
-      price: "50 RON",
-      features: [
-        "Acces exclusiv la PDF-ul cărții, înainte de lansarea oficială (15 FEBRUARIE).",
-        "Primești un newsletter cu actualizări despre procesul de scriere.",
-        "Contribui la realizarea unei povești care poate inspira o generație.",
-      ],
-      buttonText: "Sponsorizează acum",
-    },
+    // {
+    //   name: "Sponsorizează-mă în scrierea cărții (50RON cu TVA)",
+    //   price: "50 RON",
+    //   features: [
+    //     "Acces exclusiv la PDF-ul cărții, înainte de lansarea oficială (15 FEBRUARIE).",
+    //     "Primești un newsletter cu actualizări despre procesul de scriere.",
+    //     "Contribui la realizarea unei povești care poate inspira o generație.",
+    //   ],
+    //   buttonText: "Sponsorizează acum",
+    // },
     {
       name: "Precomandă cartea – reducere specială (39RON cu TVA)",
       price: "39 RON",
@@ -51,7 +51,7 @@ export function PricingSection() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {plans.map((plan, index) => (
             <div key={index} className="bg-white rounded-lg p-8 shadow-lg flex flex-col h-full">
               <div className="flex-grow space-y-6">
