@@ -11,9 +11,9 @@ export async function POST(req: Request) {
 
   // Define prices based on package type
   const prices = {
-    "Sponsorizează-mă în scrierea cărții (50RON)": 5000, // 50 RON in cents
-    "Precomandă cartea – reducere specială (39RON)": 3900, // 39 RON in cents
-    "Precomandă cartea – preț întreg (50RON)": 5000, // 50 RON in cents
+    "Sponsorizează-mă în scrierea cărții (50RON cu TVA)": 5000, // 50 RON in cents
+    "Precomandă cartea – reducere specială (39RON cu TVA)": 3900, // 39 RON in cents
+    "Precomandă cartea – preț întreg (50RON cu TVA)": 5000, // 50 RON in cents
   };
 
   const price = prices[packageType as keyof typeof prices];
@@ -42,11 +42,23 @@ export async function POST(req: Request) {
         },
       ],
       mode: "payment",
-      // success_url: `http://localhost:3000/comanda-efectuata?session_id={CHECKOUT_SESSION_ID}`,
-      // cancel_url: `http://localhost:3000/comanda-nefinalizata`,
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/comanda-efectuata?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/comanda-nefinalizata`,
+      success_url: `http://localhost:3000/comanda-efectuata?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `http://localhost:3000/comanda-nefinalizata`,
+      // success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/comanda-efectuata?session_id={CHECKOUT_SESSION_ID}`,
+      // cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/comanda-nefinalizata`,
       customer_email: email,
+      locale: "ro",
+      custom_fields: [
+        {
+          key: "judet",
+          label: {
+            type: "custom",
+            custom: "Județ",
+          },
+          type: "text",
+          optional: false,
+        },
+      ],
       metadata: {
         firstName,
         lastName,
