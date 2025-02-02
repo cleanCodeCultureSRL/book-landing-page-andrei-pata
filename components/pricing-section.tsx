@@ -8,7 +8,7 @@ export function PricingSection() {
   const [selectedPlan, setSelectedPlan] = useState("")
   const plans = [
     {
-      name: "Sponsorizează-mă în scrierea cărții (50RON)",
+      name: "Sponsorizează-mă în scrierea cărții (50RON cu TVA)",
       price: "50 RON",
       features: [
         "Acces exclusiv la PDF-ul cărții, înainte de lansarea oficială (15 FEBRUARIE).",
@@ -18,7 +18,7 @@ export function PricingSection() {
       buttonText: "Sponsorizează acum",
     },
     {
-      name: "Precomandă cartea – reducere specială (39RON)",
+      name: "Precomandă cartea – reducere specială (39RON cu TVA)",
       price: "39 RON",
       originalPrice: "50 RON",
       features: [
@@ -28,7 +28,7 @@ export function PricingSection() {
       buttonText: "Precomandă cu reducere",
     },
     {
-      name: "Precomandă cartea – preț întreg (50RON)",
+      name: "Precomandă cartea – preț întreg (50RON cu TVA)",
       price: "50 RON",
       features: [
         "Obții cartea fizică la preț standard, susținând autorul în mod direct. (după 15 FEBRUARIE)",

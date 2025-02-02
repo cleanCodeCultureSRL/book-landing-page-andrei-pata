@@ -38,6 +38,7 @@ export async function POST(req: Request) {
             unit_amount: price,
           },
           quantity: Number.parseInt(quantity),
+          tax_rates: ["txr_1Qo4Vr01l9tUBUlHytFG1eV4"],
         },
       ],
       mode: "payment",
