@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { FormModal } from "./form-modal"
+import { OfflineEventInfo } from "./offline-event-info"
 
 export function HeroSection() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -53,6 +54,8 @@ export function HeroSection() {
               📕 Precomandă acum
             </Button>
           </div>
+
+          <OfflineEventInfo />
         </div>
 
         <div className="relative mx-auto w-full max-w-[400px] aspect-[3/4]">

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 import { useState } from "react"
 import { FormModal } from "@/components/form-modal"
+import { OfflineEventInfo } from "./offline-event-info"
 
 export function PricingSection() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -85,6 +86,7 @@ export function PricingSection() {
                   {plan.buttonText}
                 </Button>
               </div>
+              <OfflineEventInfo />
             </div>
           ))}
         </div>
