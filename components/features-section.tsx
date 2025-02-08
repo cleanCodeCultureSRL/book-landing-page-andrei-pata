@@ -78,6 +78,7 @@ export function FeaturesSection() {
               </p>
             </div>
             <Button
+              disabled={true}
               variant="default"
               size="lg"
               className="bg-[rgb(162,130,167)] hover:bg-[rgb(172,140,177)] text-white"

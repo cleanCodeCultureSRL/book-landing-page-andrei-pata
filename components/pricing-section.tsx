@@ -80,6 +80,7 @@ export function PricingSection() {
                     setSelectedPlan(plan.name)
                     setIsModalOpen(true)
                   }}
+                  disabled={true}
                 >
                   {plan.buttonText}
                 </Button>
