@@ -3,7 +3,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 export function OfflineEventInfo() {
   return (
-    <Alert variant="info" className="my-4">
+    <Alert variant="default" className="my-4">
       <AlertCircle className="h-4 w-4" />
       <AlertTitle>Informație importantă despre disponibilitatea cărții</AlertTitle>
       <AlertDescription>
