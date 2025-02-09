@@ -48,14 +48,14 @@ export function HeroSection() {
             <p className="text-lg font-semibold">🌟 Nu mai aștepta schimbarea. Fii schimbarea!</p>
             <Button
               size="lg"
-              disabled={true}
+              // disabled={true}
               className="bg-[rgb(162,130,167)] hover:bg-[rgb(172,140,177)] text-white"
               onClick={() => setIsModalOpen(true)}>
               📕 Precomandă acum
             </Button>
           </div>
 
-          <OfflineEventInfo />
+          {/* <OfflineEventInfo /> */}
         </div>
 
         <div className="relative mx-auto w-full max-w-[400px] aspect-[3/4]">
