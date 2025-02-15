@@ -81,12 +81,12 @@ export function PricingSection() {
                     setSelectedPlan(plan.name)
                     setIsModalOpen(true)
                   }}
-                // disabled={true}
+                  disabled={true}
                 >
                   {plan.buttonText}
                 </Button>
               </div>
-              {/* <OfflineEventInfo /> */}
+              <OfflineEventInfo />
             </div>
           ))}
         </div>
