@@ -2,10 +2,8 @@
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
 import { useState } from "react"
 import { FormModal } from "./form-modal"
-import { OfflineEventInfo } from "./offline-event-info"
 
 export function HeroSection() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -50,12 +48,13 @@ export function HeroSection() {
               size="lg"
               disabled={true}
               className="bg-[rgb(162,130,167)] hover:bg-[rgb(172,140,177)] text-white"
-              onClick={() => setIsModalOpen(true)}>
+            // onClick={() => setIsModalOpen(true)}
+            >
               📕 Precomandă acum
             </Button>
           </div>
 
-          <OfflineEventInfo />
+          {/* <OfflineEventInfo /> */}
         </div>
 
         <div className="relative mx-auto w-full max-w-[400px] aspect-[3/4]">
@@ -69,7 +68,7 @@ export function HeroSection() {
         </div>
       </div>
       <FormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} selectedPlan={null} />
-    </section>
+    </section >
   )
 }
 
