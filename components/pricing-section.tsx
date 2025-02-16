@@ -77,7 +77,7 @@ export function PricingSection() {
                   className="w-full bg-[rgb(162,130,167)] hover:bg-[rgb(172,140,177)] text-white"
                   size="lg"
                   onClick={() => {
-                    setSelectedPlan(plan.name)
+                    setSelectedPlan("Comandă cartea – preț întreg (50RON cu TVA)")
                     setIsModalOpen(true)
                   }}
                 // disabled={true}
