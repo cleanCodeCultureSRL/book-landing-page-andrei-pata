@@ -58,9 +58,9 @@ export function PricingSection() {
                 <div className="space-y-2 text-center">
                   <h3 className="font-semibold text-xl">{plan.name}</h3>
                   <div className="text-4xl font-bold">{plan.price}</div>
-                  {plan.originalPrice && (
+                  {/* {plan.originalPrice && (
                     <div className="text-sm text-muted-foreground line-through">{plan.originalPrice}</div>
-                  )}
+                  )} */}
                 </div>
 
                 <ul className="space-y-4">
