@@ -19,7 +19,7 @@ interface FormModalProps {
 export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
   const router = useRouter()
   const [formData, setFormData] = useState({
-    packageType: selectedPlan,
+    packageType: "Comandă cartea – preț întreg (50RON cu TVA)",
     quantity: "1",
     firstName: "",
     lastName: "",
@@ -28,8 +28,6 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
     address: "",
   })
   const [isLoading, setIsLoading] = useState(false)
-
-  console.log({ selectedPlan })
 
   useEffect(() => {
     setFormData((prevData) => ({ ...prevData, packageType: selectedPlan }))
@@ -92,7 +90,7 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
               </SelectTrigger>
               <SelectContent>
                 {/* <SelectItem value="Sponsorizează-mă în scrierea cărții (50RON)">Sponsorizare (50RON)</SelectItem> */}
-                <SelectItem value="Comandă cartea – reducere specială (39RON cu TVA)">Comandă la preț redus (39RON cu TVA)</SelectItem>
+                {/* <SelectItem value="Comandă cartea – reducere specială (39RON cu TVA)">Comandă la preț redus (39RON cu TVA)</SelectItem> */}
                 <SelectItem value="Comandă cartea – preț întreg (50RON cu TVA)">Comandă la preț întreg (50RON cu TVA)</SelectItem>
               </SelectContent>
             </Select>
