@@ -81,7 +81,7 @@ function SuccessPage() {
           <div className="text-center">
             <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-6" />
             <h1 className="text-3xl font-bold mb-4">Comandă finalizată cu succes!</h1>
-            <p className="text-xl mb-8">Îți mulțumim pentru precomandă.</p>
+            <p className="text-xl mb-8">Îți mulțumim pentru Comandă.</p>
 
             {orderDetails && (
               <div className="bg-gray-100 p-6 rounded-lg mb-8">
@@ -93,7 +93,7 @@ function SuccessPage() {
                   <strong>Produs:</strong> {orderDetails.productName}
                 </p>
                 <p>
-                  <strong>Tip precomandă:</strong> {orderDetails.packageType}
+                  <strong>Tip Comandă:</strong> {orderDetails.packageType}
                 </p>
               </div>
             )}

@@ -80,7 +80,7 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="w-[95%] sm:max-w-[425px] max-h-[85vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Precomandă cartea</DialogTitle>
+          <DialogTitle>Comandă cartea</DialogTitle>
           <DialogDescription>Completează formularul pentru a finaliza precomanda ta.</DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -92,8 +92,8 @@ export function FormModal({ isOpen, onClose, selectedPlan }: FormModalProps) {
               </SelectTrigger>
               <SelectContent>
                 {/* <SelectItem value="Sponsorizează-mă în scrierea cărții (50RON)">Sponsorizare (50RON)</SelectItem> */}
-                <SelectItem value="Precomandă cartea – reducere specială (39RON cu TVA)">Precomandă la preț redus (39RON cu TVA)</SelectItem>
-                <SelectItem value="Precomandă cartea – preț întreg (50RON cu TVA)">Precomandă la preț întreg (50RON cu TVA)</SelectItem>
+                <SelectItem value="Comandă cartea – reducere specială (39RON cu TVA)">Comandă la preț redus (39RON cu TVA)</SelectItem>
+                <SelectItem value="Comandă cartea – preț întreg (50RON cu TVA)">Comandă la preț întreg (50RON cu TVA)</SelectItem>
               </SelectContent>
             </Select>
           </div>

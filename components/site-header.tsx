@@ -57,7 +57,7 @@ export function SiteHeader({ visibleSections }: SiteHeaderProps) {
     { href: "chapters-section", label: "Capitole" },
     { href: "learning-section", label: "Ce vei învăța?" },
     { href: "author-section", label: "Autor" },
-    { href: "pricing-section", label: "Precomandă" },
+    { href: "pricing-section", label: "Comandă" },
     { href: "contact-section", label: "Contact" },
   ]
 

@@ -18,24 +18,24 @@ export function PricingSection() {
     //   buttonText: "Sponsorizează acum",
     // },
     {
-      name: "Precomandă cartea – reducere specială (39RON cu TVA)",
+      name: "Comandă cartea – reducere specială (39RON cu TVA)",
       price: "39 RON",
       originalPrice: "50 RON",
       features: [
         "Obții cartea la un preț redus, disponibil doar pentru precomenzi (până la 15 FEBRUARIE)",
         "Acces la un capitol gratuit în format PDF pentru a începe lectura mai devreme.",
       ],
-      buttonText: "Precomandă cu reducere",
+      buttonText: "Comandă cu reducere",
     },
     {
-      name: "Precomandă cartea – preț întreg (50RON cu TVA)",
+      name: "Comandă cartea – preț întreg (50RON cu TVA)",
       price: "50 RON",
       features: [
         "Obții cartea fizică la preț standard, susținând autorul în mod direct. (după 15 FEBRUARIE)",
         "Primești un semn de carte personalizat, inspirat din poveste.",
         "Acces la un capitol gratuit în format PDF pentru a începe lectura mai devreme.",
       ],
-      buttonText: "Precomandă acum",
+      buttonText: "Comandă acum",
     },
   ]
 
