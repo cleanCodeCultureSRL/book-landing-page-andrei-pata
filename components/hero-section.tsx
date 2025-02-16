@@ -48,7 +48,7 @@ export function HeroSection() {
               size="lg"
               // disabled={true}
               className="bg-[rgb(162,130,167)] hover:bg-[rgb(172,140,177)] text-white"
-            // onClick={() => setIsModalOpen(true)}
+              onClick={() => setIsModalOpen(true)}
             >
               📕 Comandă acum
             </Button>

@@ -17,21 +17,21 @@ export function PricingSection() {
     //   ],
     //   buttonText: "Sponsorizează acum",
     // },
+    // {
+    //   name: "Comandă cartea – reducere specială (39RON cu TVA)",
+    //   price: "39 RON",
+    //   originalPrice: "50 RON",
+    //   features: [
+    //     "Obții cartea la un preț redus, disponibil doar pentru precomenzi (până la 15 FEBRUARIE)",
+    //     "Acces la un capitol gratuit în format PDF pentru a începe lectura mai devreme.",
+    //   ],
+    //   buttonText: "Comandă cu reducere",
+    // },
     {
-      name: "Comandă cartea – reducere specială (39RON cu TVA)",
-      price: "39 RON",
-      originalPrice: "50 RON",
+      name: "Comandă cartea",
+      price: "50 RON (cu TVA)",
       features: [
-        "Obții cartea la un preț redus, disponibil doar pentru precomenzi (până la 15 FEBRUARIE)",
-        "Acces la un capitol gratuit în format PDF pentru a începe lectura mai devreme.",
-      ],
-      buttonText: "Comandă cu reducere",
-    },
-    {
-      name: "Comandă cartea – preț întreg (50RON cu TVA)",
-      price: "50 RON",
-      features: [
-        "Obții cartea fizică la preț standard, susținând autorul în mod direct. (după 15 FEBRUARIE)",
+        "Obții cartea fizică și susții autorul în mod direct.",
         "Primești un semn de carte personalizat, inspirat din poveste.",
         "Acces la un capitol gratuit în format PDF pentru a începe lectura mai devreme.",
       ],
@@ -51,7 +51,7 @@ export function PricingSection() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-1 gap-6 max-w-3xl mx-auto">
           {plans.map((plan, index) => (
             <div key={index} className="bg-white rounded-lg p-8 shadow-lg flex flex-col h-full">
               <div className="flex-grow space-y-6">
